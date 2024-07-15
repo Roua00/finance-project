@@ -148,7 +148,7 @@ def process_excel(file_path: str):
 
 
 def bilan_actif(workbook):
-    image_path = r'C:\Users\rouar\OneDrive\Bureau\multipleapp\1ksp_yazaki.png'
+    image_path = r'1ksp_yazaki.png'
     # Add a new worksheet with name "Actif"
     actif = workbook.create_sheet("Actif")
     add_image(actif, image_path)
@@ -280,7 +280,7 @@ def bilan_actif(workbook):
     return workbook
 
 def bilan_actif_ang(workbook):
-    image_path = r'C:\Users\rouar\OneDrive\Bureau\multipleapp\1ksp_yazaki.png'
+    image_path = r'1ksp_yazaki.png'
     # Add a new worksheet with name "Actif"
     actif = workbook.create_sheet("Actif ANG")
     add_image(actif, image_path)
@@ -554,7 +554,7 @@ def bilan_actif_ang(workbook):
     return workbook
     
 def bilan_passif(workbook):
-    image_path = r'C:\Users\rouar\OneDrive\Bureau\multipleapp\1ksp_yazaki.png'
+    image_path = r'1ksp_yazaki.png'
     # Add a new worksheet with name "Passif"
     passif = workbook.create_sheet("Passif")
     add_image(passif, image_path)
@@ -681,7 +681,7 @@ def bilan_passif(workbook):
     return workbook
 
 def P_L(workbook):
-    image_path = r'C:\Users\rouar\OneDrive\Bureau\multipleapp\1ksp_yazaki.png'
+    image_path = r'1ksp_yazaki.png'
     # Add a new worksheet with name "P&L"
     pnl = workbook.create_sheet("P&L")
     add_image(pnl, image_path)
@@ -834,7 +834,7 @@ def P_L(workbook):
     return workbook
     
 def bilan_passif_ang(workbook):
-    image_path = r'C:\Users\rouar\OneDrive\Bureau\multipleapp\1ksp_yazaki.png'
+    image_path = r'1ksp_yazaki.png'
     # Add a new worksheet with name "Passif"
     passif = workbook.create_sheet("Passif ANG")
     add_image(passif, image_path)
@@ -951,7 +951,7 @@ def bilan_passif_ang(workbook):
     return workbook
 
 def P_L_ang(workbook):
-    image_path = r'C:\Users\rouar\OneDrive\Bureau\multipleapp\1ksp_yazaki.png'
+    image_path = r'1ksp_yazaki.png'
     # Add a new worksheet with name "P&L"
     pnl = workbook.create_sheet("PL ANG")
     add_image(pnl, image_path)
@@ -1254,7 +1254,7 @@ def display_upload_page(lottie_upload: dict) -> None:
         st.warning("Lottie animation could not be loaded.")
 
     uploaded_file = st.file_uploader("Upload an Excel file", type=["xlsx", "csv"])
-    TARGET_FILE_PATH = r'C:\Users\rouar\OneDrive\Bureau\multipleapp\rej.xlsx'
+    TARGET_FILE_PATH = r'rej.xlsx'
     if uploaded_file:
         st.write("### File Details")
         st.write("**Filename:**", uploaded_file.name)
@@ -1314,7 +1314,7 @@ def display_dashboards_page() -> None:
     """Display the dashboards page content."""
     
     # Load and process the Excel file
-    file = r"C:\Users\rouar\OneDrive\Bureau\multipleapp\rej12.xlsx"
+    file = r"rej12.xlsx"
     #df_clean = load_and_clean_data(df)
     # Load data and clean it
     df_clean = load_and_clean_data(pd.read_excel(file,header=3))
@@ -1511,7 +1511,7 @@ def display_dashboards_page() -> None:
         """
 
     # Display header image
-    image_path = r'C:\Users\rouar\OneDrive\Bureau\multipleapp\1ksp_yazaki.png'
+    image_path = r'1ksp_yazaki.png'
     image = Image.open(image_path)
     st.image(image, width=500)
     buffered = BytesIO()
@@ -1696,7 +1696,7 @@ def classify_accounts(value):
         return "Profit and Loss"
 
 def display_trend_analysis_page() -> None:
-    file = r"C:\Users\rouar\OneDrive\Bureau\multipleapp\rej12.xlsx"
+    file = r"rej12.xlsx"
     df_clean = load_and_clean_data(pd.read_excel(file, header=3))
 
     if df_clean.empty:
