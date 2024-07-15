@@ -14,12 +14,12 @@ lemmatizer = WordNetLemmatizer()
 
 # Load the model and data files with error handling
 try:
-    model = load_model(r'C:\Users\rouar\OneDrive\Bureau\multipleapp\pages\roua_best_chatbot_model.keras')
-    with open(r'C:\Users\rouar\OneDrive\Bureau\multipleapp\roua_final_intents.json') as f:
+    model = load_model(r'pages/roua_best_chatbot_model.keras')
+    with open(r'roua_final_intents.json') as f:
         intents = json.load(f)
-    with open(r'C:\Users\rouar\OneDrive\Bureau\multipleapp\pages\words.pkl', 'rb') as f:
+    with open(r'pages/words.pkl', 'rb') as f:
         words = pickle.load(f)
-    with open(r'C:\Users\rouar\OneDrive\Bureau\multipleapp\pages\classes.pkl', 'rb') as f:
+    with open(r'pages/classes.pkl', 'rb') as f:
         classes = pickle.load(f)
 except Exception as e:
     st.error(f"Error loading files: {e}")
