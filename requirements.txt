@@ -13,3 +13,4 @@ nltk
 tensorflow
 keras
 langchain-openai
+tensorflow keras
