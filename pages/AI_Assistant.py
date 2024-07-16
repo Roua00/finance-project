@@ -7,9 +7,20 @@ import nltk
 from nltk.stem import WordNetLemmatizer
 from keras.models import load_model
 
-# Download required NLTK data
-nltk.download('punkt')
-nltk.download('wordnet')
+# Ensure the required NLTK data is downloaded
+nltk_data_dir = os.path.join(os.getcwd(), "nltk_data")
+
+# Create the directory if it does not exist
+if not os.path.exists(nltk_data_dir):
+    os.makedirs(nltk_data_dir)
+
+# Set the NLTK data path to the custom directory
+nltk.data.path.append(nltk_data_dir)
+
+# Download the necessary NLTK data
+nltk.download('punkt', download_dir=nltk_data_dir)
+nltk.download('wordnet', download_dir=nltk_data_dir)
+
 lemmatizer = WordNetLemmatizer()
 
 # Load the model and data files with error handling
@@ -17,9 +28,9 @@ try:
     model = load_model(r'pages/Roua_best_chatbot_model.keras')
     with open(r'roua_final_intents.json') as f:
         intents = json.load(f)
-    with open(r'pages/words.pkl', 'rb') as f:
+    with open(r'/workspaces/finance-project/pages/words.pkl', 'rb') as f:
         words = pickle.load(f)
-    with open(r'pages/classes.pkl', 'rb') as f:
+    with open(r'/workspaces/finance-project/pages/classes.pkl', 'rb') as f:
         classes = pickle.load(f)
 except Exception as e:
     st.error(f"Error loading files: {e}")
