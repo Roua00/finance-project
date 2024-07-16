@@ -1,6 +1,6 @@
 streamlit
 streamlit-lottie
-requests==
+requests
 pandas
 openpyxl
 python-dotenv
