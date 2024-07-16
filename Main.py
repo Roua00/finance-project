@@ -1886,28 +1886,6 @@ def display_trend_analysis_page() -> None:
     st.plotly_chart(fig_ratios, use_container_width=True)
 
 
-    """Display the AI assistant page content."""
-    st.title("AI Assistant")
-    st.write("Get assistance from our AI-powered financial assistant.")
-    
-    if 'chat_history' not in st.session_state:
-        st.session_state.chat_history = []
-
-    # Handle user input
-    user_input = st.chat_input("You: ")
-
-    if user_input:
-        response, last_response = chatbot_response(user_input, st.session_state.last_response)
-        st.session_state.last_response = last_response
-        # Update chat history
-        st.session_state.chat_history.append({"role": "user", "content": user_input})
-        st.session_state.chat_history.append({"role": "assistant", "content": response})
-    # Display chat history
-    for message in st.session_state.chat_history: 
-        with st.chat_message(message["role"]):
-            st.markdown(message["content"])
-         
-
 
 def display_ai_assistant_page() -> None:
     """Display the AI assistant page content."""
@@ -1926,7 +1904,7 @@ def main() -> None:
     )
 
     st.sidebar.title("Navigation")
-    page = st.sidebar.radio("Go to", ["Welcome", "Upload & Process Excel", "KPIS", "Trend Analysis","AI Assistant"])
+    page = st.sidebar.radio("Go to", ["Welcome", "Upload & Process Excel", "KPIS", "Trend Analysis"])
 
     if page == "Welcome":
         display_welcome_page()
@@ -1939,9 +1917,7 @@ def main() -> None:
         #display_ai_assistant_page()
     elif page == "Trend Analysis":
         display_trend_analysis_page()
-    elif page == "AI Assistant":
-        
-          display_ai_assistant_page()
+
         
             
 main()
