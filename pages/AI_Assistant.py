@@ -29,9 +29,9 @@ try:
     model = load_model(r'pages/Roua_best_chatbot_model.keras')
     with open(r'roua_final_intents.json') as f:
         intents = json.load(f)
-    with open(r'/workspaces/finance-project/pages/words.pkl', 'rb') as f:
+    with open(r'pages/words.pkl', 'rb') as f:
         words = pickle.load(f)
-    with open(r'/workspaces/finance-project/pages/classes.pkl', 'rb') as f:
+    with open(r'pages/classes.pkl', 'rb') as f:
         classes = pickle.load(f)
 except Exception as e:
     st.error(f"Error loading files: {e}")
