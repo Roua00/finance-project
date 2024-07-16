@@ -1275,8 +1275,6 @@ def display_upload_page(lottie_upload: dict) -> None:
                 if not sheet_already_exists:
                     add_sheet_to_excel(TARGET_FILE_PATH, df, 'BG SAP')
                     st.success(f"Data added as a new sheet to {TARGET_FILE_PATH}")
-                else:
-                    st.warning(f"Sheet 'BG SAP' already exists in {TARGET_FILE_PATH}. Skipping addition.")
                 
                 workbook = process_excel(TARGET_FILE_PATH)
                 if workbook:
