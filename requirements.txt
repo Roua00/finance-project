@@ -13,4 +13,18 @@ nltk
 tensorflow
 keras
 langchain-openai
-tensorflow keras
+streamlit
+streamlit-lottie
+requests
+pandas
+openpyxl
+python-dotenv
+openai
+plotly
+Pillow
+altair
+numpy
+nltk
+tensorflow
+keras
+langchain-openai
