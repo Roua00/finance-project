@@ -8,9 +8,9 @@ openai
 plotly
 Pillow
 altair
-numpy==1.23.5
+numpy
 nltk
-tensorflow==2.14.0
-keras==2.14.0
+tensorflow
+keras
 langchain-openai
 
