@@ -6,6 +6,7 @@ import pickle
 import nltk
 from nltk.stem import WordNetLemmatizer
 from keras.models import load_model
+import os 
 
 # Ensure the required NLTK data is downloaded
 nltk_data_dir = os.path.join(os.getcwd(), "nltk_data")
