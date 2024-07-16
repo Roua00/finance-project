@@ -14,7 +14,7 @@ lemmatizer = WordNetLemmatizer()
 
 # Load the model and data files with error handling
 try:
-    model = load_model(r'pages/roua_best_chatbot_model.keras')
+    model = load_model(r'pages/Roua_best_chatbot_model.keras')
     with open(r'roua_final_intents.json') as f:
         intents = json.load(f)
     with open(r'pages/words.pkl', 'rb') as f:
