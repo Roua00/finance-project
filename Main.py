@@ -1238,11 +1238,12 @@ def display_welcome_page() -> None:
         - **AI Assistant**: Interact with our AI assistant for tailored financial advice and insights.
         - **Trend Analysis**: Explore financial trends over various periods to make informed decisions.
 
-        
+        ###  About Yazaki
+        Yazaki is a global leader in automotive parts and systems, committed to innovation and excellence. Our solutions drive the future of the automotive industry, ensuring top quality and reliability.
 
-         ### Experience the power of the Yazaki Finance Assistant – transforming data into actionable insights, and helping you achieve financial clarity and success. 🎉
+        Experience the power of the Yazaki Finance Assistant – transforming data into actionable insights, and helping you achieve financial clarity and success. 🎉
     """)
-    
+    st.video(WELCOME_VIDEO_URL)
 
 def display_upload_page(lottie_upload: dict) -> None:
     st.title("Upload & Process Excel")
@@ -1274,6 +1275,7 @@ def display_upload_page(lottie_upload: dict) -> None:
                 if not sheet_already_exists:
                     add_sheet_to_excel(TARGET_FILE_PATH, df, 'BG SAP')
                     st.success(f"Data added as a new sheet to {TARGET_FILE_PATH}")
+                
                 
                 workbook = process_excel(TARGET_FILE_PATH)
                 if workbook:
